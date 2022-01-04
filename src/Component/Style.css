@@ -1,0 +1,143 @@
+.App{
+    background-image : linear-gradient(45deg, orange, slateblue, green);
+    width : 100%;
+    min-height: 100vh;
+    color : whitesmoke;
+  }
+  
+  .topnav {
+      background-color: black;
+      height: 40px;
+      font-size : 22px;
+      justify-content: space-evenly;
+      display : flex;
+      align-items: center;
+      color: snow;
+      overflow: hidden;
+  } 
+  
+  .topnav Link:hover{
+    color: snow;
+    text-decoration: none;
+  }
+  
+  .navMenu{
+    color: snow;
+    text-decoration: none;
+  }
+  
+  .navMenu:hover{
+    color: slateblue;
+    text-decoration: none;
+  }
+  
+  .displayFlex{
+    display : flex;
+    flex-direction: row;
+    justify-content:space-around;
+    margin-left: 5%;
+    margin-top : 5%;
+  }
+  
+  .alignImage{
+    width : 20%;
+    height : 20%;
+    border-radius: 50%;
+  }
+
+  .editDetails{
+    display : flex;
+    flex-direction : column;
+  }
+
+  .editDetails input {
+    background-image : linear-gradient(45deg, orange, slateblue, green);
+    border: none;
+    height: 2.5rem;
+    outline: none;
+    width: 100%;
+}
+
+  .msgBox{
+    padding-top: 3%;
+    width: 60%;
+    color: black;
+    background:  0% 0% no-repeat padding-box;
+    border: 10px solid slateblue;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EDEDED;
+    border-radius: 10px;
+    opacity: 0.5;
+  }
+  
+  .endMsg{
+    width: 60%;
+    height: 50px;
+    margin-left: 20%;
+    padding-top: 10px;
+    background:  0% 0% no-repeat padding-box;
+    border: 10px solid slateblue;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EDEDED;
+    border-radius: 10px;
+    color: black;
+    opacity: 0.5;
+  }
+  
+  .row1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    display : flex;
+    flex-direction:row;
+    justify-content:space-between;
+  }
+  
+  .addStudent {
+    margin-top: 20px;
+    border: 2px solid black;
+    background-color: blueviolet;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;  
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    box-sizing: 0px;
+  }
+
+  .updateBtn{
+    border: 2px solid black;
+    background-color: blueviolet;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;  
+    font-size: 20px;
+    color: white;
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+
+  .backBtn{
+    border: 2px solid black;
+    background-color: blueviolet;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;  
+    font-size: 20px;
+    color: white;
+    margin-top: 50px;
+  }
+  
+  .addStudent:hover{
+    background-color : whitesmoke;
+    color: blueviolet;
+  }
+  
+  .tableAlign{
+    width: 90%;
+    margin-left: 5%;
+    background-color: rgba(255,255,255,0.5);
+    opacity: 0.75;
+  }
