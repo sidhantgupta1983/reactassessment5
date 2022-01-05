@@ -1,4 +1,5 @@
 import React from "react";
+import TextField  from '@mui/material/TextField';
 import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ContextAPI } from "./ContextAPI";
@@ -35,7 +36,7 @@ const AddUpdateStudent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (details.name ==='') {
-      alert("Name is mandatory");
+      alert("Name is mandatory to add or update a student ");
     }
     else{
       if (id === undefined) {
@@ -57,56 +58,59 @@ const AddUpdateStudent = () => {
         );
       }
     } 
-    navigate("/students");
+      navigate("/students");
   };
 
   return (
-    <div className="editDetails">
-      <form action="" onSubmit={handleSubmit}>
-        <fieldset>
-          <legend>Name:</legend>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={details.name}
-            onChange={handleChange}
-          />
-          <br />
-        </fieldset>
-        <fieldset>
-          <legend>Age:</legend>
-          <input
-            type="number"
-            id="age"
-            name="age"
-            value={details.age}
-            onChange={handleChange}
-          />
-          <br />
-        </fieldset>
-        <fieldset>
-          <legend>Course:</legend>
-          <input
-            type="text"
-            id="course"
-            name="course"
-            value={details.course}
-            onChange={handleChange}
-          />
-          <br />
-        </fieldset>
-        <fieldset>
-          <legend>Department:</legend>
-          <input
-            type="text"
-            id="batch"
-            name="batch"
-            value={details.batch}
-            onChange={handleChange}
-          />
-          <br />
-        </fieldset>
+    <div >
+      <form noValidate autoComplete="on" onSubmit={handleSubmit} className="editDetails">
+        <TextField
+          label='Name'
+          variant='outlined'
+          color='secondary'
+          margin="dense"
+          id='name'
+          type='text'
+          name='name'
+          value={details.name}
+          onChange={handleChange}
+        />
+
+        <TextField
+          label='Age'
+          variant='outlined'
+          margin="dense"
+          color='secondary'
+          id='age'
+          type='number'
+          name='age'
+          value={details.age}
+          onChange={handleChange}
+        /> 
+      
+        <TextField
+          label='Course'
+          variant='outlined'
+          color='secondary'
+          margin="dense"
+          id='course'
+          type='text'
+          name='course'
+          value={details.course}
+          onChange={handleChange}
+        />
+
+        <TextField
+          label='Batch'
+          variant='outlined'
+          margin="dense"
+          color='secondary'
+          id='batch'
+          type='text'
+          name='batch'
+          value={details.batch}
+          onChange={handleChange}
+        />
         <Link to="/students">
           <button className="backBtn">Go Back</button>
         </Link>

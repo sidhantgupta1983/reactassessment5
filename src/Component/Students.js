@@ -8,7 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { ContextAPI } from "./ContextAPI";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Students = () => {
@@ -19,9 +19,7 @@ const Students = () => {
         <div>
             <div className='row1'>
                 <h1>Students Details</h1>
-                <button className='addStudent' >
-                  <Link to='/addupdate'>Add New Student</Link>
-                </button>
+                <NavLink to='/addupdate' className='addStudent' >Add New Student</NavLink>
             </div>
             <div className='tableAlign'>
               <TableContainer component={Paper} >
@@ -39,8 +37,7 @@ const Students = () => {
                     {rows.map((row) => (
                       <TableRow
                         key={row.id}
-                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                      >
+                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                         <TableCell component="th" scope="row">
                           {row.name}
                         </TableCell>
